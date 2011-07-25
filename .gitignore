@@ -1,2 +1,4 @@
 target/*
 isolda.iws
+.sass-cache/*
+web-app/css/*
