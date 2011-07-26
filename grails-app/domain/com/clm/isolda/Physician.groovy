@@ -1,6 +1,7 @@
 package com.clm.isolda
 
 import org.apache.commons.lang.builder.ToStringBuilder
+import com.clm.isolda.security.User
 
 class Physician extends User {
 

@@ -3,6 +3,7 @@ package com.clm.isolda
 import org.apache.commons.lang.builder.ToStringBuilder
 import org.joda.time.LocalDate
 import org.joda.time.contrib.hibernate.PersistentLocalDate
+import com.clm.isolda.security.User
 
 class Patient extends User {
 

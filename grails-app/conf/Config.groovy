@@ -54,7 +54,7 @@ grails.exceptionresolver.params.exclude = ['password']
 // set per-environment serverURL stem for creating absolute links
 environments {
     production {
-        grails.serverURL = "http://www.changeme.com"
+        grails.serverURL = "http://www.changeme.RequestMap"
     }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
@@ -100,3 +100,10 @@ grails.gorm.default.mapping = {
 	"user-type" type: org.joda.time.contrib.hibernate.PersistentLocalDateTime, class: org.joda.time.LocalDateTime
 	"user-type" type: org.joda.time.contrib.hibernate.PersistentPeriod, class: org.joda.time.Period
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.clm.isolda.security.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.clm.isolda.security.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.clm.isolda.security.Role'
+grails.plugins.springsecurity.requestMap.className = 'com.clm.isolda.security.RequestMap'
+grails.plugins.springsecurity.securityConfigType = 'Requestmap'
