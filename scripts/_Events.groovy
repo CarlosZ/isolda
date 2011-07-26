@@ -4,7 +4,7 @@ eventCompileStart = {
   ant.path(id: "rhinoClasspath") {
     fileset(dir: requireJsDir, includes: "*.jar")
   }
-  
+
   ant.java(classname: "org.mozilla.javascript.tools.shell.Main", classpathref: "rhinoClasspath") {
     arg(value: "${requireJsDir}/r.js")
     arg(value: "-o")
