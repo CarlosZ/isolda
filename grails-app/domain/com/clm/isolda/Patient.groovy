@@ -6,6 +6,8 @@ import org.joda.time.contrib.hibernate.PersistentLocalDate
 
 class Patient extends User {
 
+    static expose = 'patient'
+
     LocalDate programStart
     LocalDate programEnd
     Physician secondaryPhysician
@@ -18,6 +20,7 @@ class Patient extends User {
     static constraints = {
         secondaryPhysician(nullable: true)
         programEnd(nullable: true)
+        initialMeasurements(nullable: true)
     }
 
     static mapping = {

@@ -4,6 +4,8 @@ import org.apache.commons.lang.builder.ToStringBuilder
 
 class Physician extends User {
 
+    static expose = 'physician'
+
     static hasMany = [patients: Patient]
 
     static constraints = {

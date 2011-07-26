@@ -17,6 +17,21 @@
       <excludeFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/hibernate-1.3.7/target/test-classes" />
       <excludeFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/hibernate-1.3.7/web-app/plugins" />
     </content>
+    <content url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/joda-time-1.2">
+      <sourceFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/joda-time-1.2/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/joda-time-1.2/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/joda-time-1.2/grails-app/taglib" isTestSource="false" />
+      <excludeFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/joda-time-1.2/target/classes" />
+      <excludeFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/joda-time-1.2/target/test-classes" />
+      <excludeFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/joda-time-1.2/web-app/plugins" />
+    </content>
+    <content url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/json-rest-api-1.0.8">
+      <sourceFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/json-rest-api-1.0.8/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/json-rest-api-1.0.8/grails-app/controllers" isTestSource="false" />
+      <excludeFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/json-rest-api-1.0.8/target/classes" />
+      <excludeFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/json-rest-api-1.0.8/target/test-classes" />
+      <excludeFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/json-rest-api-1.0.8/web-app/plugins" />
+    </content>
     <content url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/searchable-0.6.1">
       <sourceFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/searchable-0.6.1/src/java" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/1.3.7/projects/isolda/plugins/searchable-0.6.1/src/groovy" isTestSource="false" />

@@ -9,6 +9,8 @@ class Nutrient {
     Map<String, Double> equivalences
 
     static constraints = {
+        name(maxSize: 100)
+        description(maxSize: 2000)
     }
 
     @Override

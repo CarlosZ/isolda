@@ -10,9 +10,12 @@ class User {
     String firstName
     String lastName
     LocalDate birthDate
-    File image
+    File picture
 
     static constraints = {
+        firstName(maxSize: 25)
+        lastName(maxSize: 25)
+        picture(nullable: true)
     }
 
     static mapping = {
@@ -29,7 +32,7 @@ class User {
         if (address != user.address) return false
         if (birthDate != user.birthDate) return false
         if (firstName != user.firstName) return false
-        if (image != user.image) return false
+        if (picture != user.picture) return false
         if (lastName != user.lastName) return false
 
         return true
@@ -42,7 +45,7 @@ class User {
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0)
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0)
         result = 31 * result + (birthDate != null ? birthDate.hashCode() : 0)
-        result = 31 * result + (image != null ? image.hashCode() : 0)
+        result = 31 * result + (picture != null ? picture.hashCode() : 0)
         return result
     }
 
@@ -53,7 +56,7 @@ class User {
                 append("firstName", firstName).
                 append("lastName", lastName).
                 append("birthDate", birthDate).
-                append("image", image).
+                append("picture", picture).
                 toString()
     }
 }

@@ -9,6 +9,9 @@ class Measurement {
     String value
 
     static constraints = {
+        name(maxSize: 100)
+        unit(maxSize: 10)
+        value(maxSize: 10)
     }
 
     @Override

@@ -14,9 +14,6 @@ class DietaryProgram {
 
     static hasMany = [possibleRecipes: Recipe]
 
-    static constraints = {
-    }
-
     static mapping = {
         startDate(type: PersistentLocalDate, lazy: false)
         endDate(type: PersistentLocalDate, lazy: false)

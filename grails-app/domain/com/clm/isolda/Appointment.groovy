@@ -6,6 +6,8 @@ import org.joda.time.contrib.hibernate.PersistentLocalDateTime
 
 class Appointment {
 
+    static expose = 'appointment'
+
     LocalDateTime date
     AppointmentStatus status
     String notes
@@ -16,6 +18,8 @@ class Appointment {
     static belongsTo = [patient: Patient]
 
     static constraints = {
+        notes(nullable: true, maxSize: 2000)
+        recommendations(nullable: true, maxSize: 2000)
     }
 
     static mapping = {
