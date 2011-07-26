@@ -1,0 +1,118 @@
+$primary-font: verdana, arial, helvetica, sans-serif;
+$body-font-size: 11px;
+
+$background-color: #ffffff;
+$primary-color: #333333;
+$secondary-color: #666666;
+$title-color: #48802C;
+
+// General Elements
+
+body {
+  background: $background-color;
+  color: $primary-color;
+  font-size: $body-font-size;
+  font-family: $primary-font;
+}
+
+a {
+  &:link, &:visited, &:hover {
+    color: $secondary-color;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  color: $title-color;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 5px;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+// Inputs
+
+select {
+  padding: 2px;
+}
+
+textarea {
+  width: 250px;
+  height: 150px;
+  vertical-align: top;
+}
+
+input, select, textarea {
+  border: 1px solid $secondary-color;
+  font-family: $primary-font;
+  margin: 2px 0;
+  padding: 2px 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 1px solid #b2d1ff;
+}
+
+// TABLES
+
+table {
+  border: 1px solid $secondary-color;
+  width: 100%;
+}
+
+tr {
+  border: 0;
+}
+
+td {
+  line-height: 12px;
+  padding: 5px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  line-height: 12px;
+  padding: 5px 6px;
+  text-align: left;
+  vertical-align: top;
+  background: white url(../images/skin/shadow.jpg);
+  color: #666;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 17px;
+  padding: 2px 6px;
+  a {
+    &:link, &:visited, &:hover {
+      color: #333;
+      display: block;
+      font-size: 10px;
+      text-decoration: none;
+      width: 100%;
+    }
+  }
+  &.asc a, &.desc a {
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  &.asc a {
+    background-image: url(../images/skin/sorted_asc.gif);
+  }
+  &.desc a {
+    background-image: url(../images/skin/sorted_desc.gif);
+  }
+}
+
+.odd {
+  background: #f7f7f7;
+}
+
+.even {
+  background: #fff;
+}
+
+
