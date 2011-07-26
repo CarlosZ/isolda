@@ -2,13 +2,7 @@ eventCompileStart = {
 
   // Compile javascript
   def jsBaseDir = "${grailsSettings.baseDir}/web-app/js"
-  ant.uptodate(property: "jsIsUptodate", value: false, targetfile: "${jsBaseDir}/pkg/main.js") {
-    srcfiles(dir: "${jsBaseDir}/src/", includes: "**/*.js")
-  }
-
-  if (!ant.project.properties.jsIsUptodate) {
-    println "\n ** Compiling Javascript."
-
+  doIfUpToDate(srcDir: "${jsBaseDir}/src/", srcIncludes: "**/*.js", targetFile: "${jsBaseDir}/pkg/main.js", desc: "Javascript") {
     def requireJsDir = "${grailsSettings.baseDir}/lib/require-optimize"
     ant.path(id: "rhinoClasspath") {
       fileset(dir: requireJsDir, includes: "*.jar")
@@ -19,24 +13,28 @@ eventCompileStart = {
       arg(value: "-o")
       arg(value: "${grailsSettings.baseDir}/buildconfig.js")
     }
-  } else {
-    println "\n ** Javascript is up-to-date, not compiling."
   }
 
   def cssBaseDir = "${grailsSettings.baseDir}/web-app/css"
 
-  ant.uptodate(property: "cssIsUptodate", value: false, targetfile: "${cssBaseDir}/pkg/screen.css") {
-    srcfiles(dir: "${cssBaseDir}/src/", includes: "**/*.scss")
-  }
-
-  if (!ant.project.properties.cssIsUptodate) {
-    println "\n ** Compiling CSS."
-
+  doIfUpToDate(srcDir: "${cssBaseDir}/src/", srcIncludes: "**/*.scss", targetFile: "${cssBaseDir}/pkg/screen.css", desc: "CSS") {
     ant.exec(executable: "compass") {
       arg(value: "compile")
     }
-  } else {
-    println "\n ** CSS is up-to-date, not compiling."
   }
 }
 
+def doIfUpToDate(options, closure) {
+  def origUptodate = ant.project.properties.isUptodate
+  ant.uptodate(property: "isUptodate", value: false, targetfile: options.targetFile) {
+    srcfiles(dir: options.srcDir, includes: options.srcIncludes)
+  }
+
+  if (!ant.project.properties.isUptodate) {
+    println "\n ** Compiling ${options.desc}."
+    closure.call()
+  } else {
+    println "\n ** ${options.desc} is up-to-date, not compiling."
+  }
+  ant.property(name: "isUptodate", value: origUptodate)
+}
