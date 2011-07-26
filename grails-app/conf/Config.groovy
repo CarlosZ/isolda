@@ -107,3 +107,7 @@ grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.clm.isold
 grails.plugins.springsecurity.authority.className = 'com.clm.isolda.security.Role'
 grails.plugins.springsecurity.requestMap.className = 'com.clm.isolda.security.RequestMap'
 grails.plugins.springsecurity.securityConfigType = 'Requestmap'
+
+// Database-migration plug in configuration
+grails.plugin.databasemigration.updateOnStart = true
+grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
