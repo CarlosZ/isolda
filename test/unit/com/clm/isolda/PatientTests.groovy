@@ -2,7 +2,7 @@ package com.clm.isolda
 
 import grails.test.*
 
-class PacientTests extends GrailsUnitTestCase {
+class PatientTests extends GrailsUnitTestCase {
     protected void setUp() {
         super.setUp()
     }
