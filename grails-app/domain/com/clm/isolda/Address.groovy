@@ -11,6 +11,11 @@ class Address {
     String phoneNumber3
 
     static constraints = {
+        address1(maxSize: 200)
+        address2(nullable: true, maxSize: 200)
+        phoneNumber1(maxSize: 18)
+        phoneNumber2(nullable: true, maxSize: 18)
+        phoneNumber3(nullable: true, maxSize: 18)
     }
 
     @Override

@@ -10,9 +10,6 @@ class Objective {
     LocalDate completed
     MeasurementSet targetMeasurements
 
-    static constraints = {
-    }
-
     static mapping = {
         proposed(type: PersistentLocalDate, lazy: false)
         completed(type: PersistentLocalDate, lazy: false)

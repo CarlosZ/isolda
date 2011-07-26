@@ -12,8 +12,18 @@ class MeasurementSet {
     Measurement belly
     Measurement arms
     Measurement legs
+    Measurement bloodPressure
+
 
     static constraints = {
+        bodyMassIndex(nullable: true)
+        fat(nullable: true)
+        chest(nullable: true)
+        waist(nullable: true)
+        belly(nullable: true)
+        arms(nullable: true)
+        legs(nullable: true)
+        bloodPressure(nullable: true)
     }
 
     @Override
@@ -31,6 +41,7 @@ class MeasurementSet {
         if (legs != that.legs) return false
         if (waist != that.waist) return false
         if (weight != that.weight) return false
+        if (bloodPressure != that.bloodPressure) return false
 
         return true
     }
@@ -46,6 +57,7 @@ class MeasurementSet {
         result = 31 * result + (belly != null ? belly.hashCode() : 0)
         result = 31 * result + (arms != null ? arms.hashCode() : 0)
         result = 31 * result + (legs != null ? legs.hashCode() : 0)
+        result = 31 * result + (bloodPressure != null ? bloodPressure.hashCode() : 0)
         return result
     }
 
@@ -61,6 +73,7 @@ class MeasurementSet {
                 append("waist", waist).
                 append("belly", belly).
                 append("legs", legs).
+                append("bloodPressure", bloodPressure).
                 toString()
     }
 }

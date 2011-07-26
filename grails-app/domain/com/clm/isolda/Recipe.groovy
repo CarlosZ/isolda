@@ -12,6 +12,8 @@ class Recipe {
     static belongsTo = [dietaryProgram: DietaryProgram]
 
     static constraints = {
+        name(maxSize: 100)
+        description(maxSize: 5000)
     }
 
     @Override
